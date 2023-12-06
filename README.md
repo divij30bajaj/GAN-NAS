@@ -1,9 +1,9 @@
 # GAN-NAS
 Inspired by [Off-Policy Reinforcement Learning for Efficient and Effective GAN Architecture Search, ECCV 2020](https://arxiv.org/pdf/2007.09180.pdf), our work proposes four changes to the original work, which has used SAC to search the best Generator network while keeping the Discriminator constant. Our contributions include:
-1. Replacing SAC with DDPG (Updated search.py, added ddpg.py, ddpg_model.py in DDPG/search directory)
-2. Replacing SAC with DQN (Updated search.py, added dqn.py, dqn_model.py in DQN/search directory)
-3. Updating the reward function to incorporate stability of the GAN (Updated search.py and functions.py in StabilityReward/search directory)
-4. Adding another SAC agent to learn the discriminator using a separate action space (Updated search.py, functions.py in DiscriminatorSearch/search, added shared_gen_dis.py, dis_blocks_search.py in DiscriminatorSearch/search/models_search and DiscriminatorSearch/eval/models_search, updated train_derived.py, functions.py in DiscriminatorSearch/eval)
+1. **Replacing SAC with DDPG** (Updated *search.py*, added *ddpg.py, ddpg_model.py* in `DDPG/search` directory)
+2. **Replacing SAC with DQN** (Updated *search.py, added *dqn.py, dqn_model.py* in `DQN/search` directory)
+3. **Updating the reward function to incorporate stability of the GAN** (Updated *search.py* and *functions.py* in `StabilityReward/search` directory)
+4. **Adding another SAC agent to learn the discriminator using a separate action space** (Updated *search.py, functions.py* in `DiscriminatorSearch/search`, added *shared_gen_dis.py, dis_blocks_search.py* in `DiscriminatorSearch/search/models_search` and `DiscriminatorSearch/eval/models_search`, updated *train_derived.py, functions.py* in `DiscriminatorSearch/eval`)
    
 ### Dependencies ###
 ```pip install pytorch==1.4.0 torchvision==0.5.0
